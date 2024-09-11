@@ -1,37 +1,20 @@
 #include <stdio.h>
 
-// Função para verificar se o ano é bissexto
-int verificar_bissexto(int ano) {
-    // Verifica se o ano é divisível por 4
-    if (ano % 4 == 0) {
-        // Verifica se o ano é divisível por 100
-        if (ano % 100 == 0) {
-            // Verifica se o ano é divisível por 400
-            if (ano % 400 == 0) {
-                return 1; // Ano bissexto
-            } else {
-                return 0; // Não é bissexto
-            }
-        } else {
-            return 1; // Ano bissexto
-        }
-    } else {
-        return 0; // Não é bissexto
+void verificarTriangulo(int a, int b, int c) {
+   
+    if ((a + b > c) && (a + c > b) && (b + c > a)) {
+        printf("1\n"); 
     }
+  
 }
 
-// Função principal
 int main() {
-    int ano;
+    int lado1, lado2, lado3;
 
-    // Solicita ao usuário o ano
-    printf("Digite um ano: ");
-    scanf("%d", &ano);
+    printf("Digite o valor dos três lados do triângulo:\n");
+    scanf("%d %d %d", &lado1, &lado2, &lado3);
 
-    // Verifica se o ano é bissexto e imprime o resultado
-    if (verificar_bissexto(ano)) {
-        printf("1\n");
-    }
+    verificarTriangulo(lado1, lado2, lado3);
 
     return 0;
 }
